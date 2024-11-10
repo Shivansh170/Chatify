@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{{url_for('static',filename="styles.css")}}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cedarville+Cursive&family=DynaPuff:wght@400..700&family=Playwrite+GB+S:ital,wght@0,100..400;1,100..400&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <div id="logo">Chatify</div>
+        <nav>
+            <a href="{{ url_for('home') }}">Home</a>
+            <a href="{{url_for("about")}}">About</a>
+            <a href="{{url_for("support")}}">Support</a>
+        </nav>
+        <div id="right">
+            <a href="{{url_for("search")}}">
+            <img src="static/search.svg">
+            </a>
+            <div id="ul"></div>
+            <a href="{{url_for('login')}}">
+            <button id="login">Login</button>
+            </a>
+        </div>
+    </header>
+    <section id="content">
+        <div id="moto">
+            <h1>
+                Revolutionize the way you connect!
+            </h1>
+            <h2>
+                With lightning-fast chats, endless customization, and an experience that feels personal, not just
+                digital.
+            </h2>
+        </div>
+        <div id="photo">
+            <img src="static/image 2.jpg">
+        </div>
+    </section>
+    <section id="buttons">
+        <a href='{{url_for("login")}}'>
+        <button id="text">
+            <img src="static/chat.svg">
+            <p style="margin-left: 10px;">Chat now</p>
+        </button>
+    </a>
+    </section>
+</body>
+
+</html>

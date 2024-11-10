@@ -1,0 +1,68 @@
+@import url("styles.css");
+
+body {
+    margin: 0;
+    background-color: #32174D;
+    font-family: 'Roboto', sans-serif;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+}
+
+#search-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 100px;
+    text-align: center;
+    animation: fadeIn 1s ease-out;
+}
+
+#search-content h1 {
+    font-size: 50px;
+    font-family: 'Roboto', sans-serif;
+    margin-bottom: 20px;
+    opacity: 0;
+    animation: fadeIn 1s forwards 0.5s;
+}
+
+#search-content p {
+    font-size: 20px;
+    font-family: 'Playwrite GB S';
+    color: rgba(255, 255, 255, 0.7);
+    opacity: 0;
+    animation: fadeIn 1s forwards 1s;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@media (max-width: 768px) {
+    #search-content h1 {
+        font-size: 35px;
+    }
+
+    #search-content p {
+        font-size: 18px;
+    }
+}
+
+@media (max-width: 480px) {
+    #search-content h1 {
+        font-size: 28px;
+    }
+
+    #search-content p {
+        font-size: 16px;
+    }
+}

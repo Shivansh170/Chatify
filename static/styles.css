@@ -1,0 +1,284 @@
+body {
+    margin: 0;
+    background-color: #32174D;
+    animation: fadeIn 1s ease-out;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    background-color: rgba(0, 0, 0, 0.415);
+    height: 60px;
+    min-width: 100%;
+    animation: slideInDown 1s ease-out;
+}
+
+#logo {
+    font-family: 'Playwrite GB S';
+    font-size: 28px;
+    color: #ff6b6b;
+    font-weight: bold;
+    margin-right: auto;
+    padding-left: 20px;
+}
+
+header nav a {
+    color: white;
+    text-decoration: none;
+    margin-right: 40px;
+    font-size: 18px;
+    font-family: 'Playwrite GB S', sans-serif;
+    opacity: 0;
+    animation: fadeIn 1s forwards 0.5s;
+    transition: border 0.3s ease, padding 0.3s ease;
+}
+
+header nav a:hover {
+    padding: 5px;
+    border: solid rgb(118, 53, 126) 2px;
+}
+
+#right {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+#ul {
+    border: solid white 1px;
+    height: 20px;
+    margin-right: 20px;
+    margin-left: 20px;
+}
+
+#login {
+    border: solid white 2px;
+    font-size: 15px;
+    padding: 7px 20px;
+    border-radius: 19px;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.044);
+    font-family: Roboto, sans-serif;
+    font-weight: 500;
+    opacity: 0;
+    animation: fadeIn 1s forwards 1s;
+}
+
+#content {
+    margin-top: 10%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    animation: fadeIn 1s ease-out 1s;
+}
+
+#moto {
+    border-top: solid white 2px;
+    border-left: solid white 2px;
+    width: 45%;
+    margin-left: 60px;
+    color: white;
+    padding: 7px;
+    backdrop-filter: blur(2px);
+    min-height: 512px;
+    opacity: 0;
+    animation: slideInLeft 1s ease-out forwards;
+}
+
+#moto h1 {
+    font-size: 70px;
+    margin-top: 0px;
+    padding-top: 30px;
+    padding-left: 30px;
+    font-family: Roboto;
+    font-weight: 500;
+    width: 85%;
+    opacity: 0;
+    animation: fadeIn 1s forwards 1.5s;
+}
+
+#moto h2 {
+    font-weight: 30px;
+    font-family: Playwrite GB S;
+    padding-left: 30px;
+    letter-spacing: 2px;
+    width: 85%;
+    opacity: 0;
+    animation: fadeIn 1s forwards 2s;
+}
+
+#photo img {
+    border: solid white 4px;
+    object-fit: contain;
+    opacity: 0;
+    transform: scale(1.1);
+    animation: fadeIn 1s ease-out 1.5s, zoomOut 1.5s forwards 2s;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideInDown {
+    from {
+        transform: translateY(-50px);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideInLeft {
+    from {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes zoomOut {
+    from {
+        transform: scale(1.1);
+        opacity: 0;
+    }
+
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+@keyframes scaleUp {
+    from {
+        transform: scale(0);
+    }
+
+    to {
+        transform: scale(1);
+    }
+}
+
+#buttons {
+    margin-left: 20%;
+    animation: fadeIn 1s ease-out 2.5s;
+}
+
+#text {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-left: 20px;
+    padding-right: 20px;
+    border: solid white 3px;
+    border-radius: 32px;
+    font-size: 20px;
+    background-color: #32174D;
+    color: white;
+    font-family: Playwrite GB S;
+    transform: scale(0);
+    animation: scaleUp 1s forwards 3s;
+}
+
+@media (max-width: 1200px) {
+    #moto {
+        width: 60%;
+        margin-left: 20px;
+    }
+
+    #content {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #photo img {
+        width: 100%;
+    }
+}
+
+@media (max-width: 768px) {
+    #moto {
+        width: 80%;
+        margin-left: 0;
+        margin-bottom: 20px;
+    }
+
+    #moto h1 {
+        font-size: 50px;
+    }
+
+    #moto h2 {
+        font-size: 20px;
+    }
+
+    #text {
+        font-size: 18px;
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+    #buttons {
+        margin-left: 10%;
+    }
+
+    header nav a {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 480px) {
+    header {
+        flex-direction: column;
+        height: auto;
+        padding: 10px 0;
+    }
+
+    header nav a {
+        margin-right: 10px;
+        font-size: 12px;
+    }
+
+    #content {
+        margin-top: 5%;
+    }
+
+    #moto {
+        width: 90%;
+        margin-left: 0;
+        margin-bottom: 20px;
+    }
+
+    #moto h1 {
+        font-size: 35px;
+        padding-left: 10px;
+    }
+
+    #moto h2 {
+        font-size: 18px;
+    }
+
+    #buttons {
+        margin-left: 0;
+        text-align: center;
+    }
+
+    #text {
+        font-size: 16px;
+        padding-left: 5px;
+        padding-right: 5px;
+    }
+}

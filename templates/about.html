@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About - Chatify</title>
+    <link rel="stylesheet" href="{{url_for('static',filename="about.css")}}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cedarville+Cursive&family=DynaPuff:wght@400..700&family=Playwrite+GB+S:ital,wght@0,100..400;1,100..400&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+
+    <header>
+        <div id="logo">Chatify</div>
+        <nav>
+            <a href="{{url_for('home')}}">Home</a>
+            <a href="{{url_for("about")}}">About</a>
+            <a href="{{url_for("support")}}">Support</a>
+        </nav>
+    </header>
+
+    <section class="support-banner">
+        <h1>Your Platform for Random Text Chats</h1>
+        <p>Chatify is your ultimate platform for chatting with new people, engaging in random text chats, and making new
+            friends from around the world.</p>
+    </section>
+
+    <div class="support-content">
+        <div class="support-section">
+            <h2>The Vision</h2>
+            <p>Chatify aims to create a seamless, user-friendly communication platform where people can connect,
+                collaborate, and share ideas in real time. It offers personalized and secure text-based chat rooms
+                designed for casual conversations, as well as more structured spaces for professional discussions.</p>
+        </div>
+
+        <div class="support-section">
+            <h2>Our Mission</h2>
+            <p>Our mission is to foster a vibrant, inclusive online community where everyone feels welcome. We strive to
+                make every interaction meaningful and memorable, enabling users to discover new perspectives, cultures,
+                and personalities from across the globe.</p>
+        </div>
+
+        <div class="support-section">
+            <h2>Features</h2>
+            <p>Text Chats: Meet and chat with people in text-based rooms.</p>
+            <p>Secure Connections: We offer a safe and friendly environment.</p>
+            <p>Global Reach: Connect with users from diverse countries.</p>
+            <p>Customizable Experience: Personalize your chat rooms and interactions.</p>
+        </div>
+
+        <div class="support-section">
+            <h2>Future Scope</h2>
+            <p>Currently, the "Continue with Google" and "Continue with Facebook" login buttons are not functional, but
+                we plan to make these options available in the future for a smoother sign-in experience.</p>
+            <p>Additionally, while the app does not currently support room creation, this feature is on our roadmap and
+                will be implemented in the future, allowing users to create custom rooms for their conversations.</p>
+        </div>
+    </div>
+
+</body>
+
+</html>

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='login.css') }}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cedarville+Cursive&family=DynaPuff:wght@400..700&family=Playwrite+GB+S:ital,wght@0,100..400;1,100..400&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div id="top">
+    </div>
+    <div id="login">
+        <div id="logo">
+            <p>CHITCHAT</p>
+        </div>
+        <div id="text">
+            <h1>Welcome Back!</h1>
+            <p>Sign in to your account to start chatting with buddies!</p>
+        </div>
+
+        
+        {% with messages = get_flashed_messages(with_categories=true) %}
+            {% if messages %}
+                <div id="flash-messages">
+                    {% for category, message in messages %}
+                        <div class="flash {{ category }}">
+                            <p>{{ message }}</p>
+                        </div>
+                    {% endfor %}
+                </div>
+            {% endif %}
+        {% endwith %}
+
+        <form action="{{ url_for('login') }}" method="POST">
+            <div id="buttons">
+                <button id="google" type="button">
+                    <img src="static/google.svg" alt="Google">
+                    <h1>Continue with Google</h1>
+                </button>
+                <button id="fb" type="button">
+                    <img src="static/facebook.svg" alt="Facebook">
+                    <h1>Continue With Facebook</h1>
+                </button>
+                <div class="separator">or</div>
+                <div id="email">
+                    <input type="email" name="email" placeholder="Enter your email" required>
+                    <input type="password" name="password" placeholder="Enter your password" required>
+                    <button type="submit" id="lo">
+                        <img src="static/person.svg">
+                        <h1>Login to your account</h1>
+                    </button>
+                </div>
+            </div>
+        </form>
+
+        <div id="lt">
+            <p>Want to start chatting effortlessly?</p>
+            <a href="{{ url_for('signup') }}">Get Started!</a>
+        </div>
+    </div>
+    <div id="bottom">
+    </div>
+</body>
+
+</html>

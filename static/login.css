@@ -1,0 +1,259 @@
+body {
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(19, 4, 70, 0.266);
+    height: 100vh;
+    margin: 0;
+}
+
+#top {
+    background: url('wave-gd.svg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 23%;
+}
+
+#login {
+    margin-top: 3%;
+    border: solid #999 3px;
+    border-radius: 15px;
+    padding: 17px;
+    width: 40%;
+    background-color: rgb(29, 29, 29);
+    align-self: center;
+    box-sizing: border-box;
+    margin-bottom: 0px;
+    margin-left: 30%;
+    margin-right: 30%;
+}
+
+#logo p {
+    color: white;
+    font-family: Roboto;
+    font-size: 24px;
+}
+
+#text h1 {
+    color: #999;
+    font-family: Playwrite GB S;
+    margin-bottom: 0px;
+}
+
+#text p {
+    color: #999;
+    font-family: Playwrite GB S;
+    width: 100%;
+    margin-top: 0px;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+input {
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    margin-bottom: 10px;
+    font-size: 16px;
+    color: #333;
+}
+
+button {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    width: 100%;
+    border-radius: 5px;
+    box-sizing: border-box;
+    border: none;
+    font-weight: 500;
+}
+
+button h1 {
+    margin: 0;
+    font-size: 16px;
+    font-family: Roboto;
+    font-weight: 400;
+    margin-right: 35%;
+}
+
+button img {
+    margin-left: 10px;
+}
+
+#google,
+#fb {
+    margin-bottom: 16px;
+}
+
+#fb {
+    background-color: rgb(24, 119, 242);
+    color: white;
+}
+
+.separator {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    color: #999;
+    margin-bottom: 20px;
+    margin-top: 17px;
+}
+
+.separator::before,
+.separator::after {
+    content: "";
+    flex: 1;
+    border-bottom: 1px solid #999;
+}
+
+.separator:not(:empty)::before {
+    margin-right: 10px;
+}
+
+.separator:not(:empty)::after {
+    margin-left: 10px;
+}
+
+#email {
+    display: block;
+    color: white;
+    max-width: 100%;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+#email input {
+    width: 100%;
+}
+
+#lo {
+    background-color: rgba(101, 74, 181, 0.9);
+    color: white;
+}
+
+#lt {
+    display: flex;
+    box-sizing: border-box;
+    align-items: center;
+    font-family: Roboto;
+    font-family: 14px;
+}
+
+#lt p {
+    color: white;
+}
+
+#lt a {
+    color: rgba(101, 74, 181, 0.9);
+    text-decoration: none;
+}
+
+#bottom {
+    margin-top: 0px;
+    background-image: url('wave.svg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    min-height: 19%;
+    margin-bottom: 20%;
+    background-position: center;
+}
+
+.flash-messages {
+    list-style-type: none;
+    padding: 0;
+    margin: 20px 0;
+}
+
+.flash {
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+.flash.success {
+    background-color: #4CAF50;
+    color: white;
+}
+
+.flash.error {
+    background-color: #f44336;
+    color: white;
+}
+
+@media screen and (max-width: 768px) {
+    #login {
+        width: 80%;
+        margin-left: 10%;
+        margin-right: 10%;
+    }
+
+    #logo p {
+        font-size: 20px;
+    }
+
+    #text h1 {
+        font-size: 20px;
+    }
+
+    #text p {
+        font-size: 14px;
+    }
+
+    button h1 {
+        font-size: 14px;
+    }
+
+    .separator {
+        font-size: 14px;
+    }
+
+    input {
+        font-size: 14px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    #login {
+        width: 90%;
+        margin-left: 5%;
+        margin-right: 5%;
+    }
+
+    #logo p {
+        font-size: 18px;
+    }
+
+    #text h1 {
+        font-size: 18px;
+    }
+
+    #text p {
+        font-size: 12px;
+    }
+
+    button h1 {
+        font-size: 12px;
+    }
+
+    .separator {
+        font-size: 12px;
+    }
+
+    input {
+        font-size: 12px;
+    }
+
+    #fb {
+        font-size: 14px;
+    }
+
+    #google {
+        font-size: 14px;
+    }
+}
